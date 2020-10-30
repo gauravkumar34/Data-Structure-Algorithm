@@ -24,6 +24,20 @@ public:
                 }
             }
         }
-        return card;
+        // we can not assure , so we check
+        int count2 = 0;
+        for (int i = 0; i < A.size(); i++)
+        {
+            if (A[i] == card)
+            {
+                count2++;
+            }
+        }
+        if (count2 > A.szie() / 2)
+            return card;
+        else
+            return -1;
+
+        // return card;
     }
 };
