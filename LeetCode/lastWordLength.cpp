@@ -7,8 +7,8 @@
 
 // Example:
 
-// Input: "Hello World"
-// Output: 5
+// *Input: "Hello World"
+// *Output: 5
 
 class Solution
 {
