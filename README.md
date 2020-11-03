@@ -1,4 +1,5 @@
-![cp](https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg) ![cp](https://user-images.githubusercontent.com/25124428/66685841-3680af80-ec9b-11e9-8c86-7044f30854b4.png)
+![cp](https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg)
+![cp](https://vlabs.stackroute.in/sites/all/themes/nuvepro/companies/3/logo.jpg)![cp](https://user-images.githubusercontent.com/25124428/66685841-3680af80-ec9b-11e9-8c86-7044f30854b4.png)
 
 # Competitive-Programming Preparation
 
