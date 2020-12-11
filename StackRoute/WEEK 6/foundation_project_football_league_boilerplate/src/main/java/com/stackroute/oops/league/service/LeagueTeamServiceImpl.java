@@ -108,20 +108,40 @@ public class LeagueTeamServiceImpl implements LeagueTeamService {
     @Override
     public String allotPlayersToTeam(String adminName, String password, LeagueTeamTitles teamTitle)
             throws TeamAlreadyFormedException, PlayerNotFoundException {
-        int count = 1;
+        int count = 0;
+        if (!(AdminCredentials.admin.equals(adminName) && AdminCredentials.password.equals(password)))
+            return "Invalid credentials for admin";
 
-        registeredPlayerList = getAllRegisteredPlayers();
-        for (Player p : registeredPlayerList) {
+        // registeredPlayerList = getAllRegisteredPlayers(); //!error mark
+        List<Player> playerList = playerDao.getAllPlayers();
+        if (registeredPlayerList.isEmpty())
+            return "No player is registered";
+
+        for (Player p : playerList) {
             if (p.getTeamTitle() == null)
                 continue;
-            if (p.getTeamTitle().equals(teamTitle.getTeamValue()))
+            if (p.getTeamTitle().equals(teamTitle.getTeamValue())) {
                 count++;
-            // if(p.getPlayerName().equals(adminName) && p.getPassword().equals(password)){}
-        }
-        if (count == 11)
-            throw new TeamAlreadyFormedException();
 
-        return null;
+            }
+
+        }
+        if (count == 11) {
+            throw new TeamAlreadyFormedException();
+        }
+
+        System.out.println(registeredPlayerList.size());
+        for (Player p : registeredPlayerList) {
+            if (p.getTeamTitle() == null) {
+                p.setTeamTitle(teamTitle.getTeamValue());
+                playerTeamDao.addPlayerToTeam(p);
+
+            }
+
+        }
+        // System.out.println(count);
+
+        return "Players allotted to teams";
     }
 
     /**
