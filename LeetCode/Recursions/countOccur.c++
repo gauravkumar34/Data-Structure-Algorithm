@@ -27,6 +27,7 @@ int occ2(int a[], int n, int x, int i)
         return occ2(a, n, x, i + 1);
     }
 }
+
 int main()
 {
     int a[] = {1, 4, 3, 4, 5, 7};
