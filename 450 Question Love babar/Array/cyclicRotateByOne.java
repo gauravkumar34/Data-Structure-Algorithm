@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Cyclically rotate an array by one 
+ * 7. Cyclically rotate an array by one 
  * N = 5 
  * A[] = {1, 2, 3, 4, 5} 
  * Output: 5 1 2 3 4
